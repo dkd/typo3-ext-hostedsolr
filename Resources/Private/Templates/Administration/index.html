@@ -1,0 +1,80 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="de">
+    <f:layout name="Backend/Default"/>
+
+        <f:section name="content">
+
+            <f:flashMessages renderMode="div" />
+            <f:render partial="Administration/NewForm" arguments="{core:core, solrVersions:solrVersions, languages:languages}" />
+
+
+            <h3>Apache Solr Indexes</h3>
+            <f:if condition="{solrCores}">
+                <f:then>
+                    <table class="core-list typo3-dblist table table-striped table-hover">
+                        <thead>
+                        <tr class="t3-row-header">
+                            <th>Id</th>
+                            <th><f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:tx_hostedsolr.name" /></th>
+                            <th><f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:tx_hostedsolr.schema" /></th>
+                            <th><f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:tx_hostedsolr.solrVersion" /></th>
+                            <th><f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:tx_hostedsolr.createdAt" /></th>
+                            <th><f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:tx_hostedsolr.actions" /></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <f:for each="{solrCores}" as="core">
+
+                            <tr class="{f:if(condition: '{core.isActivated}', else: 'f3-form-error')}">
+                                <td>
+                                    {core.id}
+                                </td>
+                                <td>
+                                     {core.name}
+                                </td>
+                                <td class="core-shema">{core.schema}</td>
+                                <td class="core-solrVersion">{core.solrVersion}</td>
+                                <td class="core-shame">
+
+                                    <f:format.date format="d.m.Y">{core.createdAt}</f:format.date>
+
+
+                                <td>
+
+                                    <f:link.action
+                                            class="btn btn-default"
+                                            controller="Administration"
+                                            action="show"
+                                            arguments="{name:core.name,
+                                                        internalName:core.internalName
+                                                        password:core.password,
+                                                        host:core.host}">
+
+                                        <f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang.xlf:tipps.label" />
+                                    </f:link.action>
+
+
+                                    <a href="{f:uri.action(action:'delete',arguments: '{id: \'{core.id}\',name: \'{core.name}\'}')}"
+                                       class="btn btn-default t3js-modal-trigger"
+                                       icon="actions-edit-delete"
+                                       data-severity="warning"
+                                       data-title="{f:translate(key: 'LLL:EXT:hostedsolr/Resources/Private/Language/locallang.xlf:message.delete.title')} - {core.name}"
+                                       data-content="{f:translate(key: 'LLL:EXT:hostedsolr/Resources/Private/Language/locallang.xlf:message.delete.content')}">
+
+                                        <f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang.xlf:delete.label" />
+                                    </a>
+
+                                </td>
+
+                            </tr>
+                        </f:for>
+                        </tbody>
+                    </table>
+                </f:then>
+                <f:else>
+                    <p><f:translate key="msg_noCoresFound" /></p>
+                </f:else>
+            </f:if>
+
+        </f:section>
+</div>

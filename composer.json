@@ -1,0 +1,28 @@
+{
+  "name": "dkd/hostedsolr",
+  "type": "typo3-cms-extension",
+  "description": "Hostedsolr Client",
+  "homepage": "http://www.dkd.de",
+  "license": ["GPL-2.0+"],
+  "keywords": [
+    "TYPO3 CMS",
+    "extension",
+    "hostedsolr"
+  ],
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Arthur Rehm",
+      "role": "Developer",
+      "homepage": "http://www.dkd.de"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": ">=7.6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dkd\\Hostedsolr\\": "Classes"
+    }
+  }
+}

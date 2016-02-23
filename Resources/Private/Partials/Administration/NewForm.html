@@ -1,0 +1,62 @@
+<h3><f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:addNewCore" /></h3>
+
+<f:form objectName="core" object="{core}" action="create" enctype="multipart/form-data" method="post">
+
+    <table class="create-core table table-striped table-hover">
+        <tbody>
+        <tr>
+            <th><f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:tx_hostedsolr.name" /></th>
+            <td>
+                <div class="form-control-wrap">
+                    <div class="form-control-holder">
+                        <f:form.textfield
+                                property="name"
+                                class="form-control f3-form-error"
+                                pattern="[a-z-0-9]*-*[a-z-0-9]"
+                                title="lowercase, no space e.g. my-hosted-solr-core"
+                                errorClass="'f3-form-error'"/>
+                        </div></div>
+
+            </td>
+        </tr>
+
+        <tr>
+            <th><f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:tx_hostedsolr.solrVersion" /></th>
+            <td>
+                <f:form.select
+                        options="{solrVersions}"
+                        property="solrVersion"
+                        optionLabelField="displayTitle"
+                        optionValueField="title"
+                        class="form-control form-control-adapt"/>
+            </td>
+        </tr>
+
+        <tr>
+            <th><f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:tx_hostedsolr.schema" /></th>
+            <td>
+                <f:form.select
+                        options="{languages}"
+                        property="language"
+                        optionLabelField="displayTitle"
+                        optionValueField="title"
+                        class="form-control form-control-adapt"/>
+            </td>
+        </tr>
+
+        <tr>
+            <th>&nbsp;</th>
+            <td>
+                <f:form.submit
+                        value="{f:translate(key: 'LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:btn_save')}"
+                        class="t3-button btn btn-default btn-sm" />
+                <f:link.action
+                        action="index"
+                        class="t3-button btn btn-default btn-sm">
+                    <f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:btn_cancel"/>
+                </f:link.action>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</f:form>

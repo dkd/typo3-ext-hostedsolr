@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-07-17T14:55:14Z" product-name="ls_slider">
+		<header/>
+		<body>
+			<trans-unit id="version.3.6">
+                <source>3.6 (Solr for TYPO3 v2.8.x)</source>
+            </trans-unit>
+			<trans-unit id="version.4.8">
+                <source>4.8 (Solr for TYPO3 v3.0.1)</source>
+            </trans-unit>
+            <trans-unit id="version.4.10">
+               <source>4.10 (Solr for TYPO3 v3.1)</source>
+            </trans-unit>
+ 			<trans-unit id="language.german">
+                 <source>German</source>
+            </trans-unit>
+            <trans-unit id="language.english">
+                 <source>English</source>
+            </trans-unit>
+
+            <trans-unit id="message.create.success">
+                 <source>Core created successfully</source>
+            </trans-unit>
+            <trans-unit id="message.create.fail">
+                 <source>Sorry, something went wrong</source>
+            </trans-unit>
+
+            <trans-unit id="message.delete.success">
+                 <source>Core deleted successfully</source>
+            </trans-unit>
+            <trans-unit id="message.delete.fail">
+                 <source>Sorry, something went wrong</source>
+            </trans-unit>
+
+
+            <trans-unit id="message.delete.title">
+                <source>Warning</source>
+            </trans-unit>
+            <trans-unit id="message.delete.content">
+                <source>Removing a Apache Solr index is irreversible. Are you sure you want to proceed?</source>
+            </trans-unit>
+
+            <trans-unit id="delete.label">
+                <source>Delete</source>
+            </trans-unit>
+            <trans-unit id="tipps.label">
+                <source>Tipps</source>
+            </trans-unit>
+
+
+
+		</body>
+	</file>
+</xliff>
+
+

@@ -1,0 +1,42 @@
+<div class="hostedsolr">
+
+    <f:be.container
+                    loadJQuery='true'
+                    includeCssFiles="{0: '{f:uri.resource(path:\'StyleSheets/backend.css\')}'}"
+                    includeRequireJsModules="{
+		                0:'TYPO3/CMS/Backend/Modal'
+	                 }">
+        <div class="typo3-fullDoc module tx-hostedsolr">
+
+
+            <div id="typo3-docheader" class="module-docheader t3js-module-docheader">
+
+                <div class="typo3-docheader-functions module-docheader-bar module-docheader-bar-navigation t3js-module-docheader-bar t3js-module-docheader-bar-navigation">
+                    <div class="left module-docheader-bar-column-left">
+                        <f:be.menus.actionMenu>
+                            <f:be.menus.actionMenuItem label="{f:translate(key: 'LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:tx_hostedsolr.index')}" controller="Administration" action="index" />
+                            <f:be.menus.actionMenuItem label="{f:translate(key: 'LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:tx_hostedsolr.info')}" controller="Administration" action="information" />
+                        </f:be.menus.actionMenu>
+                    </div>
+                </div>
+
+
+
+                <div class="module-docheader-bar module-docheader-bar-buttons t3js-module-docheader-bar t3js-module-docheader-bar-buttons">
+                    <div class="left module-docheader-bar-column-left">
+                        <f:render section="docheader-buttons" arguments="{_all}" optional="true" />
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="typo3-docbody" class="module-body t3js-module-body">
+                <f:render section="content" />
+            </div>
+        </div>
+    </f:be.container>
+
+
+
+</div>

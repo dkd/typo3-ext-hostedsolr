@@ -1,0 +1,18 @@
+
+
+table.core-list {
+    width: 80%;
+}
+
+table.create-core {
+    width: 60%;
+}
+
+
+table.create-core th{
+    width: 20%;
+}
+
+table.create-core td{
+    width: 80%;
+}

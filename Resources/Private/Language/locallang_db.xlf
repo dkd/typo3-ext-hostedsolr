@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-01-21T10:47:23Z" product-name="hostedsolr">
+		<header/>
+		<body>
+			<trans-unit id="em.authentication" xml:space="preserve">
+				<source>Authentication</source>
+			</trans-unit>
+            <trans-unit id="em.apiToken" xml:space="preserve">
+				<source>API Token</source>
+			</trans-unit>
+			<trans-unit id="em.secretToken" xml:space="preserve">
+            	<source>Secret Token</source>
+            </trans-unit>
+
+            <trans-unit id="btn_add_core" xml:space="preserve">
+                <source>Add Core</source>
+            </trans-unit>
+
+			<trans-unit id="msg_noCoresFound" xml:space="preserve">
+				<source>No Solr Cores found!</source>
+			</trans-unit>
+
+			<trans-unit id="addNewCore" xml:space="preserve">
+            	<source>Create new Apache Solr index</source>
+            </trans-unit>
+
+
+
+            <trans-unit id="tx_hostedsolr.name" xml:space="preserve">
+            	<source>Name</source>
+            </trans-unit>
+            <trans-unit id="tx_hostedsolr.createdAt" xml:space="preserve">
+                <source>Created At</source>
+            </trans-unit>
+            <trans-unit id="tx_hostedsolr.schema" xml:space="preserve">
+                <source>Schema / Language</source>
+            </trans-unit>
+            <trans-unit id="tx_hostedsolr.password" xml:space="preserve">
+                <source>Password</source>
+            </trans-unit>
+             <trans-unit id="tx_hostedsolr.solrVersion" xml:space="preserve">
+                 <source>Solr Version</source>
+             </trans-unit>
+            <trans-unit id="tx_hostedsolr.solrVersion" xml:space="preserve">
+               <source>Solr Version</source>
+            </trans-unit>
+            <trans-unit id="tx_hostedsolr.system" xml:space="preserve">
+                <source>System</source>
+            </trans-unit>
+            <trans-unit id="tx_hostedsolr.updatedAt" xml:space="preserve">
+                <source>Updated At</source>
+            </trans-unit>
+            <trans-unit id="tx_hostedsolr.createdAt" xml:space="preserve">
+                <source>Created At</source>
+            </trans-unit>
+            <trans-unit id="tx_hostedsolr.isActivated" xml:space="preserve">
+                <source>Activated</source>
+            </trans-unit>
+            <trans-unit id="tx_hostedsolr.id" xml:space="preserve">
+                <source>Id</source>
+            </trans-unit>
+            <trans-unit id="tx_hostedsolr.actions" xml:space="preserve">
+                <source>Actions</source>
+            </trans-unit>
+
+            <trans-unit id="btn_save" xml:space="preserve">
+                <source>Create Solr core</source>
+            </trans-unit>
+            <trans-unit id="btn_cancel" xml:space="preserve">
+                <source>Cancel</source>
+            </trans-unit>
+
+            <trans-unit id="tx_hostedsolr.info" xml:space="preserve">
+                <source>Information</source>
+            </trans-unit>
+            <trans-unit id="tx_hostedsolr.index" xml:space="preserve">
+                <source>Administration</source>
+            </trans-unit>
+
+        </body>
+	</file>
+</xliff>

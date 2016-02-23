@@ -1,0 +1,10 @@
+# Authentication
+###########################
+# customcategory=authentication=LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:em.authentication
+
+# cat=authentication//a; type=string; label=LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:em.apiToken
+apiToken =
+
+# cat=authentication//b; type=string; label=LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:em.secretToken
+secretToken =
+
