@@ -155,7 +155,7 @@ class AdministrationController extends ActionController
         $schema = $core->getLanguage();
 
         // Validation
-        if(empty($var)){
+        if(empty($name)){
             $this->addFlashMessage("Name cannot be empty!", "Error", \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR);
             $this->redirect('index');
         }
