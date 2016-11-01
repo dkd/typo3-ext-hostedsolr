@@ -17,6 +17,17 @@
 
     <f:section name="content">
 
+        <script type="text/javascript">
+            require([
+                'TYPO3/CMS/Hostedsolr/Clipboard',
+            ], function(
+                    Clipboard
+            ){
+                console.log(Clipboard)
+                new Clipboard('.copy-btn');
+            });
+        </script>
+
         <f:flashMessages renderMode="div" />
 
         <div>
@@ -24,14 +35,14 @@
             <h1>Hints for using the index  {coreName}</h1>
 
             <p>
-                The following sections provide informations for a first-time usage of your Solr index.
+                The following sections provide information for a first-time use of your Solr index.
             </p>
 
             <h2>
-                Using with TYPO3
+                Using it with TYPO3
             </h2>
             <p>
-                For using the created Solr index in your TYPO3 installation you might use the following TypoScript configuration:
+                To use the created Solr index in your TYPO3 installation, you can use the following TypoScript configuration:
             </p>
 
 
@@ -40,8 +51,6 @@
                     {typoScript}
                 </f:format.raw>
             </div>
-
-
 
 
         </div>

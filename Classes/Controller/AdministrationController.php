@@ -92,6 +92,13 @@ class AdministrationController extends ActionController
      */
     public function indexAction()
     {
+        // redirect to information tab
+        $extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['hostedsolr']);
+        if($extConf['apiToken'] == null || $extConf['secretToken'] == null) {
+            $this->addFlashMessage("The authentication requires two parameters: api_token and secret_token.", "Hostedsolr API credentials required", \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
+            $this->redirect('information');
+        }
+
         $allCoresFromApi = $this->service->getAllCores();
 
         $solrVersions = $this->getSolrVersions();
