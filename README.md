@@ -1,6 +1,9 @@
 TYPO3 Extension hostedsolr
 ===
 
+Hostedsolr for TYPO3 is an client for wwww.hosted-solr.com service.
+You can manage your Hostedsolr account with this extension via the TYPO3 backend.
+
 Contribute
 ---
 
