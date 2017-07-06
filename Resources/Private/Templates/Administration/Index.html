@@ -1,11 +1,11 @@
-<div xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers">
+<div>
     <f:layout name="Backend/Default"/>
 
         <f:section name="content">
 
-            <f:flashMessages renderMode="div" />
             <f:render partial="Administration/NewForm" arguments="{core:core, solrVersions:solrVersions, languages:languages}" />
-
 
             <h3>Apache Solr Indexes</h3>
             <f:if condition="{solrCores}">
@@ -46,7 +46,7 @@
                                             controller="Administration"
                                             action="show"
                                             arguments="{name:core.name,
-                                                        internalName:core.internalName
+                                                        internalName:core.internalName,
                                                         password:core.password,
                                                         host:core.host}">
 
