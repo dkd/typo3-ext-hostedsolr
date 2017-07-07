@@ -4,38 +4,31 @@ module.tx_hostedsolr {
         availableCoreSetups {
             TYPO3 {
                 1 {
-                    label = 3.6 (TYPO3 4.5LTS / EXT:solr 2.8)
-                    variant = ext-2.8
-                    system = typo3
-                    solr_version = 3.6
-                    schema = arabic, armenian, basque, bulgarian, burmese, catalan, chinese, czech, danish, dutch, english, finnish, french, galician, german, greek, hindi, hungarian, indonesian, italian, japanese, khmer, korean, lao, norwegian, persian, polish, portuguese, romanian, russian, spanish, swedish, thai, turkish, ukrainian
-                }
-                2 {
                     label = 4.8 (TYPO3 6.2LTS / EXT:solr 3.0)
                     variant = ext-3.0
                     system = typo3
                     solr_version = 4.8
                     schema = arabic, armenian, basque, bulgarian, burmese, catalan, chinese, czech, danish, dutch, english, finnish, french, galician, german, greek, hindi, hungarian, indonesian, italian, japanese, khmer, korean, lao, norwegian, persian, polish, portuguese, romanian, russian, spanish, swedish, thai, turkish, ukrainian
                 }
-                3 {
+                2 {
                     label = 4.10 (TYPO3 7.6LTS / EXT:solr 5.1)
                     variant = ext-5.1
                     system = typo3
                     solr_version = 4.10
                     schema = arabic, armenian, basque, bulgarian, burmese, catalan, chinese, czech, danish, dutch, english, finnish, french, galician, german, greek, hindi, hungarian, indonesian, italian, japanese, khmer, korean, lao, norwegian, persian, polish, portuguese, romanian, russian, spanish, swedish, thai, turkish, ukrainian
                 }
-                4 {
+                3 {
                     label = 6.3 (TYPO3 7.6LTS / EXT:solr 6.0)
                     variant = ext-6.0
                     system = typo3
-                    solr_version = 6.3
+                    solr_version = 6.3.0
                     schema = arabic, armenian, basque, bulgarian, burmese, catalan, chinese, czech, danish, dutch, english, finnish, french, galician, german, greek, hindi, hungarian, indonesian, italian, japanese, khmer, korean, lao, norwegian, persian, polish, portuguese, romanian, russian, spanish, swedish, thai, turkish, ukrainian
                 }
-                5 {
+                4 {
                     label = 6.3 (TYPO3 7.6LTS & 8.7LTS / EXT:solr 6.1)
                     variant = ext-6.1
                     system = typo3
-                    solr_version = 6.3
+                    solr_version = 6.3.0
                     schema = arabic, armenian, basque, bulgarian, burmese, catalan, chinese, czech, danish, dutch, english, finnish, french, galician, german, greek, hindi, hungarian, indonesian, italian, japanese, khmer, korean, lao, norwegian, persian, polish, portuguese, romanian, russian, spanish, swedish, thai, turkish, ukrainian
                 }
 
