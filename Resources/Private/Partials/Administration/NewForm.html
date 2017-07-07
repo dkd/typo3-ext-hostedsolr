@@ -1,7 +1,9 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers">
+
 <h3><f:translate key="LLL:EXT:hostedsolr/Resources/Private/Language/locallang_db.xlf:addNewCore" /></h3>
 
 <f:form objectName="core" object="{core}" action="create" enctype="multipart/form-data" method="post">
-
     <table class="create-core table table-striped table-hover">
         <tbody>
         <tr>
@@ -25,10 +27,12 @@
             <td>
                 <f:form.select
                         options="{solrVersions}"
-                        property="solrVersion"
-                        optionLabelField="displayTitle"
-                        optionValueField="title"
-                        class="form-control form-control-adapt"/>
+                        property="variant"
+                        optionValueField="variant"
+                        optionLabelField="label"
+                        class="form-control form-control-adapt"
+                        value="ext-6.1"/>
+
             </td>
         </tr>
 
@@ -40,7 +44,8 @@
                         property="language"
                         optionLabelField="displayTitle"
                         optionValueField="title"
-                        class="form-control form-control-adapt"/>
+                        class="form-control form-control-adapt"
+                        value="english"/>
             </td>
         </tr>
 

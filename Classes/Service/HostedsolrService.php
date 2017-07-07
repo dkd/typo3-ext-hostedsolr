@@ -54,13 +54,16 @@ class HostedsolrService implements SingletonInterface
      * @param string $schema
      * @return boolean
      */
-    public function createCore($name, $solrVersion = '4.8', $schema = 'english')
+    public function createCore($name, $solrVersion = null, $schema = 'english', $variant = null)
     {
-        return $this->service->createNewCore($name, $system = 'typo3',$solrVersion, $schema);
+        return $this->service->createNewCore($name, $system = 'typo3', $solrVersion, $schema, $variant);
     }
 
     /**
+     * Deletes core by given identifier
+     *
      * @param integer $id
+     * @return bool
      */
     public function deleteCoreById($id)
     {

@@ -48,6 +48,10 @@
                 <source>Tipps</source>
             </trans-unit>
 
+            <trans-unit id="tipps.go_back">
+                <source>Back to list</source>
+            </trans-unit>
+
 
 
 		</body>

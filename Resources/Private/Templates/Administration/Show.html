@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers">
+
+<f:layout name="Backend/Default" />
+
+<f:section name="docheader-buttons">
+    <div class="module-docheader-bar module-docheader-bar-buttons t3js-module-docheader-bar t3js-module-docheader-bar-buttons" style="height: auto;">
+        <div class="module-docheader-bar-column-left">
+            <div class="btn-toolbar" role="toolbar" aria-label="">
+                <f:link.action action="index" title="{f:translate(key: 'tipps.go_back')}" class="btn btn-default btn-sm">
+                    <core:icon identifier="actions-close" />
+                </f:link.action>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+<f:section name="content">
+    <div>
+
+        <h1>Hints for using the index  {coreName}</h1>
+
+        <p>
+            The following sections provide information for a first-time use of your Solr index.
+        </p>
+
+        <h2>
+            Using it with TYPO3
+        </h2>
+        <p>
+            To use the created Solr index in your TYPO3 installation, you can use the following TypoScript configuration:
+        </p>
+
+
+        <div class="nowrap">
+             <f:format.raw>
+                {typoScript}
+            </f:format.raw>
+        </div>
+    </div>
+
+</f:section>
