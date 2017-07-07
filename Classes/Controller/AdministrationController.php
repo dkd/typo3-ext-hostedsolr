@@ -36,6 +36,7 @@ use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
  * Administration module controller
  *
  * @author Arthur Rehm <arthur.rehm@gmail.com>
+ * @todo: implement dependend <select> like on hosted solr
  */
 class AdministrationController extends ActionController
 {
@@ -97,19 +98,12 @@ class AdministrationController extends ActionController
             $this->redirect('information');
         }
 
-        $allCoresFromApi = $this->service->getAllCores();
-
-        $solrVersions = $this->getSolrVersions();
-        $languages = $this->getLanguages();
-
-
         $this->view->assignMultiple(array(
-            'solrVersions' => $solrVersions,
-            'languages' => $languages,
-            'solrCores' => $allCoresFromApi
+            'solrVersions' => $this->settings['availableCoreSetups']['TYPO3'],
+            'languages' => $this->getLanguages(),
+            'solrCores' => $this->service->getAllCores()
         ));
     }
-
 
     /**
      * Show Action
@@ -141,7 +135,6 @@ class AdministrationController extends ActionController
             'coreName' => $name,
             'typoScript' => $ts
         ));
-
     }
 
     /**
@@ -154,8 +147,10 @@ class AdministrationController extends ActionController
     {
 
         $name = $core->getName();
-        $solrVersion = $core->getSolrVersion();
         $schema = $core->getLanguage();
+        $variant = $core->getVariant();
+        $this->resolveSolrVersion($core);
+        $solrVersion = $core->getSolrVersion();
 
         // Validation
         if(empty($name)){
@@ -164,7 +159,7 @@ class AdministrationController extends ActionController
         }
 
         // Create Core
-        $status = $this->service->createCore($name, $solrVersion, $schema);
+        $status = $this->service->createCore($name, $solrVersion, $schema, $variant);
 
         $message = $status ? LocalizationUtility::translate('message.create.success', 'hostedsolr')
             : LocalizationUtility::translate('message.create.fail', 'hostedsolr');
@@ -204,22 +199,8 @@ class AdministrationController extends ActionController
      */
     public function informationAction()
     {
-
     }
 
-    /**
-     * prepare Solr Core Version for select box
-     *
-     * @return array
-     */
-    public function getSolrVersions()
-    {
-        return array (
-            '4.10' => LocalizationUtility::translate('version.4.10', 'hostedsolr'),
-            '4.8' => LocalizationUtility::translate('version.4.8', 'hostedsolr'),
-            '3.6' => LocalizationUtility::translate('version.3.6', 'hostedsolr')
-        );
-    }
 
     /**
      * prepare languages for select box
@@ -228,10 +209,20 @@ class AdministrationController extends ActionController
      */
     public function getLanguages()
     {
-        return array (
-            'german' => LocalizationUtility::translate('language.german', 'hostedsolr'),
-            'english' => LocalizationUtility::translate('language.english', 'hostedsolr')
-        );
+        $languages = explode(',', str_replace(' ', '', $this->settings['availableCoreSetups']['TYPO3'][1]['schema']));
+        $languages = array_combine($languages, $languages);
+        return $languages;
+    }
+
+    protected function resolveSolrVersion(Core $core)
+    {
+        foreach ($this->settings['availableCoreSetups']['TYPO3'] as $key => $setup) {
+            if ($setup['variant'] == $core->getVariant()) {
+                $core->setSolrVersion($setup['solr_version']);
+            }
+        }
+        $variant = $core->getVariant();
+
     }
 
 }

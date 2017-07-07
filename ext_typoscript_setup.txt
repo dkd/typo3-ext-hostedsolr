@@ -1,0 +1,105 @@
+module.tx_hostedsolr {
+    settings {
+        # cat=module.tx_myextension/string; type=string; label=Label Text
+        availableCoreSetups {
+            TYPO3 {
+                1 {
+                    label = 3.6 (TYPO3 4.5LTS / EXT:solr 2.8)
+                    variant = ext-2.8
+                    system = typo3
+                    solr_version = 3.6
+                    schema = arabic, armenian, basque, bulgarian, burmese, catalan, chinese, czech, danish, dutch, english, finnish, french, galician, german, greek, hindi, hungarian, indonesian, italian, japanese, khmer, korean, lao, norwegian, persian, polish, portuguese, romanian, russian, spanish, swedish, thai, turkish, ukrainian
+                }
+                2 {
+                    label = 4.8 (TYPO3 6.2LTS / EXT:solr 3.0)
+                    variant = ext-3.0
+                    system = typo3
+                    solr_version = 4.8
+                    schema = arabic, armenian, basque, bulgarian, burmese, catalan, chinese, czech, danish, dutch, english, finnish, french, galician, german, greek, hindi, hungarian, indonesian, italian, japanese, khmer, korean, lao, norwegian, persian, polish, portuguese, romanian, russian, spanish, swedish, thai, turkish, ukrainian
+                }
+                3 {
+                    label = 4.10 (TYPO3 7.6LTS / EXT:solr 5.1)
+                    variant = ext-5.1
+                    system = typo3
+                    solr_version = 4.10
+                    schema = arabic, armenian, basque, bulgarian, burmese, catalan, chinese, czech, danish, dutch, english, finnish, french, galician, german, greek, hindi, hungarian, indonesian, italian, japanese, khmer, korean, lao, norwegian, persian, polish, portuguese, romanian, russian, spanish, swedish, thai, turkish, ukrainian
+                }
+                4 {
+                    label = 6.3 (TYPO3 7.6LTS / EXT:solr 6.0)
+                    variant = ext-6.0
+                    system = typo3
+                    solr_version = 6.3
+                    schema = arabic, armenian, basque, bulgarian, burmese, catalan, chinese, czech, danish, dutch, english, finnish, french, galician, german, greek, hindi, hungarian, indonesian, italian, japanese, khmer, korean, lao, norwegian, persian, polish, portuguese, romanian, russian, spanish, swedish, thai, turkish, ukrainian
+                }
+                5 {
+                    label = 6.3 (TYPO3 7.6LTS & 8.7LTS / EXT:solr 6.1)
+                    variant = ext-6.1
+                    system = typo3
+                    solr_version = 6.3
+                    schema = arabic, armenian, basque, bulgarian, burmese, catalan, chinese, czech, danish, dutch, english, finnish, french, galician, german, greek, hindi, hungarian, indonesian, italian, japanese, khmer, korean, lao, norwegian, persian, polish, portuguese, romanian, russian, spanish, swedish, thai, turkish, ukrainian
+                }
+
+            }
+
+#            Drupal {
+#                1 {
+#                    label = 4.8 (Drupal)
+#                    variant = drupal-4.8
+#                    system = drupal
+#                    solr_version = 4.8
+#                    schema = standard
+#                }
+#            }
+#
+#            Magento_Integernet {
+#                1 {
+#                    label = 4.10 (Magento Integernet)
+#                    variant = integernet-4.10
+#                    system = integernet
+#                    solr_version = 4.10
+#                    schema = english
+#                }
+#            }
+#
+#            Magento_SolrBridge {
+#                1 {
+#                    label = 4.10 (Magento SolrBridge)
+#                    variant = solrbridge-4.10
+#                    system = solrbridge
+#                    solr_version = 4.10
+#                    schema = german
+#                }
+#            }
+#
+#            Magento {
+#                1 {
+#                    label = 4.10 (Magento)
+#                    variant = magento-4.10
+#                    system = magento
+#                    solr_version = 4.10
+#                    schema = english
+#                }
+#            }
+#
+#            Sunspot {
+#                1 {
+#                    label = 4.10 (Sunspot)
+#                    variant = sunspot-4.10
+#                    system = sunspot
+#                    solr_version = 4.10
+#                    schema = standard
+#                }
+#            }
+#
+#            WordPress {
+#                1 {
+#                    label = 4.10 (WordPress)
+#                    variant = wordpress-4.10
+#                    system = wordpress
+#                    solr_version = 4.10
+#                    schema = english
+#                }
+#            }
+        }
+    }
+}

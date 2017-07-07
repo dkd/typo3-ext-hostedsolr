@@ -5,7 +5,7 @@
 
         <f:section name="content">
 
-            <f:render partial="Administration/NewForm" arguments="{core:core, solrVersions:solrVersions, languages:languages}" />
+            <f:render partial="Administration/NewForm" arguments="{_all}" />
 
             <h3>Apache Solr Indexes</h3>
             <f:if condition="{solrCores}">

@@ -30,7 +30,7 @@ namespace Dkd\Hostedsolr\Domain\Model;
 /**
  * Core
  */
-class Core extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Core
 {
     /**
      * uid
@@ -59,6 +59,13 @@ class Core extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $solrVersion = '';
+
+    /**
+     * variant
+     *
+     * @var string
+     */
+    protected $variant = '';
 
     /**
      * host
@@ -158,6 +165,27 @@ class Core extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setSolrVersion($solrVersion)
     {
         $this->solrVersion = $solrVersion;
+    }
+
+    /**
+     * Returns the variant
+     *
+     * @return string the variant id from possible setup
+     */
+    public function getVariant()
+    {
+        return $this->variant;
+    }
+
+    /**
+     * Sets the variant
+     *
+     * @param string $variant
+     * @return void
+     */
+    public function setVariant($variant)
+    {
+        $this->variant = $variant;
     }
 
     /**

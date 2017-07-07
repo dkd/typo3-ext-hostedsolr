@@ -49,10 +49,10 @@ $EM_CONF[$_EXTKEY] = array(
   'clearCacheOnLoad' => 0,
   'lockType' => '',
   'author_company' => 'dkd Internet Service GmbH',
-  'version' => '0.3.1',
+  'version' => '0.4.0',
   'constraints' => array(
     'depends' => array(
-      'typo3' => '7.6.0-7.6.99',
+      'typo3' => '7.6.0-8.7.99',
     ),
     'conflicts' => array(
       'coreapi' => '',
